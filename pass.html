@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Assignment 6</title>
+    <script>
+
+        var correct = 0, wrong = 0;
+
+        function processPhrase() {
+
+
+
+            phrasesecret = document.getElementById("phrasesecret").value
+
+            phrasecheck = document.getElementById("phrasecheck").value
+
+            if (phrasesecret == phrasecheck) {
+
+                correct = correct + 1;
+
+                document.getElementById("result").innerHTML = "Correct count " + correct;
+
+                alert("access allowed");
+
+            } else {
+
+
+
+                wrong = wrong + 1;
+
+                document.getElementById("result").innerHTML = "Wrong count " + wrong;
+
+                alert("access denied");
+
+            }
+
+        }
+
+    </script>
+</head>
+<body>
+    <h1>Pass phrase by Alekhya Gandra</h1>
+    <form>
+
+        <label for="phrasesecret">Enter the secret phrase </label>
+
+        <input type="password" id="phrasesecret" name="phrasesecret" value="Let me in"> <br>
+
+        <label for="phrasecheck">Enter a phrase</label>
+
+        <input type="text" id="phrasecheck" name="phrasecheck" autofocus> <br>
+
+        <br>
+
+        <input type="button" onclick="processPhrase()" value="Check the phrase">
+
+    </form>
+    <p id="result">Count of the attempts display here </p>
+
+</body>
